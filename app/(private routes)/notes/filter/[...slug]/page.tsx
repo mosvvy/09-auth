@@ -24,7 +24,7 @@ export async function generateMetadata({
       openGraph: {
         title: "Notes page | NoteHub",
         description: "All notes",
-        url: "https://08-zustand-seven-self.vercel.app/notes/filter/all",
+        url: "https://09-auth-ten-topaz.vercel.app/notes/filter/all",
         images: [
           {
             url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
@@ -43,7 +43,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${tag} notes | NoteHub`,
       description: `Notes filtered by tag: ${tag}`,
-      url: `https://08-zustand-seven-self.vercel.app/notes/filter/${tag}`,
+      url: `https://09-auth-ten-topaz.vercel.app/notes/filter/${tag}`,
       images: [
         {
           url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
