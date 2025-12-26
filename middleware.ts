@@ -33,7 +33,10 @@ export async function middleware(request: NextRequest) {
       const setCookie = data.headers["set-cookie"];
 
       if (setCookie) {
-        const response = NextResponse.next();
+        // const response = NextResponse.next();
+        const response = isPublicRoute
+          ? NextResponse.redirect(new URL("/", request.url))
+          : NextResponse.next();
         const cookiesArr = Array.isArray(setCookie) ? setCookie : [setCookie];
 
         for (const cookieStr of cookiesArr) {
@@ -58,9 +61,10 @@ export async function middleware(request: NextRequest) {
           return NextResponse.redirect(new URL("/", request.url), response);
         }
 
-        if (isPrivateRoute) {
-          return response;
-        }
+        // if (isPrivateRoute) {
+        //   return response;
+        // }
+        return response;
       }
     } catch {}
   }
