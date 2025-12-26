@@ -143,7 +143,7 @@ import css from "./SignInPage.module.css";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ApiError } from "@/types/api";
-import { useAuthStore } from "@/lib/store/auth";
+import { useAuthStore } from "@/lib/store/authStore";
 
 export default function SignIn() {
   const [error, setError] = useState("");

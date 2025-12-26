@@ -102,7 +102,7 @@ import { useRouter } from "next/navigation";
 import { register, RegisterPayload } from "@/lib/api/clientApi";
 import { AxiosError } from "axios";
 
-import { useAuthStore } from "@/lib/store/auth";
+import { useAuthStore } from "@/lib/store/authStore";
 import { ApiError } from "@/types/api";
 
 const SignUp = () => {
